@@ -3,7 +3,7 @@ import axios from 'axios';
 import { X } from 'lucide-react';
 import { format } from 'date-fns';
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 const CATEGORIES = [
   'Food & Dining', 'Transportation', 'Shopping', 

@@ -4,7 +4,7 @@ import { format } from 'date-fns';
 import { Plus, Trash2, Filter } from 'lucide-react';
 import ExpenseForm from '../components/ExpenseForm';
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 export default function Expenses() {
   const [expenses, setExpenses] = useState([]);
