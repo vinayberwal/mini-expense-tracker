@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import { LayoutDashboard, Receipt, Settings, CreditCard } from 'lucide-react';
 import Dashboard from './pages/Dashboard';

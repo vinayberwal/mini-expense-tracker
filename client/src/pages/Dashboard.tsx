@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell
 } from 'recharts';
-import { DollarSign, TrendingUp, CreditCard, Activity } from 'lucide-react';
+import { DollarSign, TrendingUp, CreditCard } from 'lucide-react';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
@@ -109,7 +109,7 @@ export default function Dashboard() {
                   nameKey="category"
                   stroke="none"
                 >
-                  {summary?.byCategory?.map((entry: any, index: number) => (
+                  {summary?.byCategory?.map((_: any, index: number) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
